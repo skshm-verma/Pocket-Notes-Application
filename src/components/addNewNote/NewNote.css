@@ -1,0 +1,81 @@
+.whole-page {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+
+}
+
+.new-div-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: max-content;
+    width: max-content;
+    border-radius: 1rem;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.new-div-style h2 {
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+    font-weight: 100;
+    padding: 1rem;
+    margin: 0.5rem 1rem;
+}
+
+.input-conatiner {
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 1rem;
+    margin: 0.5rem;
+    padding: 0.2rem 1rem;
+}
+
+.input-conatiner span {
+    margin-right: 1rem;
+}
+
+.input-label {
+    border-radius: 0.8rem;
+    border: 1px solid #CCCCCC;
+    padding: 0.5rem;
+    width: 15rem;
+    outline: none;
+}
+
+.color-list{
+    list-style: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin: 0rem 0.4rem;
+    cursor: pointer;
+}
+
+.selected{
+    border : 1.5px solid black;
+}
+
+.btn {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 100%;
+}
+
+.btn button {
+    width: 6.5rem;
+    height: 1.5rem;
+    border-radius: 2rem;
+    background-color: #001F8B;
+    border: 1px solid #001F8B;
+    color: white;
+    cursor: pointer;
+    margin: 0.8rem 2rem 0.8rem 0rem;
+}

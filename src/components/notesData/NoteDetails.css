@@ -1,0 +1,130 @@
+.notes-details-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 10%;
+    background-color: #001F8B;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.arrow-btn{
+    margin: auto 0rem auto 1.5rem;
+    cursor: pointer;
+}
+
+.note-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
+    border: 1px solid lightblue;
+    background-color: lightblue;
+    margin: auto 2rem;
+    font-size: 1rem;
+    color: white;
+}
+
+.header p {
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+}
+
+.notes-details-container {
+    width: 100%;
+    height: 70%;
+    background-color: #DAE5F5;
+}
+
+
+
+.footer {
+    width: 100%;
+    height: 20%;
+    background-color: #001F8B;
+
+}
+
+.input-area-div {
+    width: 61rem;
+    height: 7rem;
+    background-color: white;
+    margin: 1rem 2rem;
+    border-radius: 1rem;
+    position: relative;
+
+}
+
+.text-area-style {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    resize: none;
+    border: 1px solid #CCCCCC;
+    padding: 1rem;
+    outline: none;
+    overflow: hidden;
+}
+
+.submit-btn {
+    position: absolute;
+    z-index: 1;
+    width: 1.2rem;
+    height: 1rem;
+    bottom: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+}
+
+/** EachNoteDetailsCSS **/
+
+.each-note-div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.note-detail {
+    margin: 0.5rem 3rem;
+    background-color: white;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    height: max-content;
+    width: 90%;
+}
+
+.note-detail p {
+    padding: 1.5rem 2.5rem;
+}
+
+/** Media queries**/
+
+@media only screen and (max-width: 820px){
+      .notes-details-div{
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .input-area-div{
+        width: 85%;
+        height: 70%;
+        margin-top: 1.5rem;
+      }
+
+      .note-detail {
+        width: 80%;
+        margin: 0.5rem 2.5rem;
+      }
+}

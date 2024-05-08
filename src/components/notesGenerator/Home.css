@@ -1,0 +1,37 @@
+.home-div {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.side-bar {
+    height: 100%;
+    width: 30%;
+}
+
+.notes-container {
+    height: 100%;
+    width: 70%;
+    background-color: #DAE5F5;
+}
+
+/** Media queries**/
+
+@media only screen and (max-width: 820px){
+
+    .home-div{
+       position: relative;
+    }
+
+    .side-bar{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .notes-container{
+        position: absolute;
+        width: 0;
+        z-index: 1;
+    }
+
+}
