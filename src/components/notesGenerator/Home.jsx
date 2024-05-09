@@ -3,8 +3,10 @@ import { useState, useEffect } from 'react'
 import NotesConatiner from '../container/NotesContainer'
 import Sidebar from '../sidebar/Sidebar'
 import NewNote from '../addNewNote/NewNote'
-import './Home.css'
 import NoteDetails from '../notesData/NoteDetails'
+import moment from 'moment';
+import './Home.css'
+
 
 const Home = () => {
 
@@ -33,11 +35,16 @@ const Home = () => {
   
 
   const handleItemNotes = (note , noteId) => {
-    setAllNotes([...allNotes, { id: noteId, note }])
+    setAllNotes([...allNotes, { id: noteId, note , data : moment().format("Do MMM YYYY") , time : moment().format("h:mm a")}])
   }
 
   const handleSidebar = (val) => {
     setShowNoteDetails(val)
+  }
+
+  const handleHomeScreen = () =>{
+    setShowNewNote(false)
+    setNewOpacity(1);
   }
 
   useEffect(() => {
@@ -56,7 +63,7 @@ const Home = () => {
         {showNoteDetails ? <NotesConatiner /> : 
         <NoteDetails itemNotes={itemNotes} handleItemNotes={handleItemNotes} notesList={allNotes} handleSidebar={handleSidebar}/>}
       </div>
-      {showNewNote && <NewNote onGroupCreate={handleGroupCreate} />}
+      {showNewNote && <NewNote onGroupCreate={handleGroupCreate} handleHomeScreen={handleHomeScreen}/>}
 
     </div>
   )

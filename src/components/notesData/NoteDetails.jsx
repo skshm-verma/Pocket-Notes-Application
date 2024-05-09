@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import EachNoteDetails from './EachNoteDetails'
 import BackArrow from '../../../public/assets/BackArrow.png'
 import SubmitArrow from '../../../public/assets/SubmitArrow.png'
+import DisabledArrow from '../../../public/assets/DisabledArrow.png'
 import './NoteDetails.css'
 
 
-const NoteDetails = ({ itemNotes, handleItemNotes, notesList , handleSidebar }) => {
+const NoteDetails = ({ itemNotes, handleItemNotes, notesList, handleSidebar }) => {
 
 
   const [note, setNote] = useState('')
@@ -15,16 +16,18 @@ const NoteDetails = ({ itemNotes, handleItemNotes, notesList , handleSidebar }) 
     setNote('')
     handleItemNotes(note, itemNotes.id)
   }
-  
+
   const showSidebar = () => {
     handleSidebar(true)
   }
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && note.trim().length !== 0) {
       handleAllNotes()
     }
   }
+
+  const isSubmitDisabled = note.trim().length !== 0;
 
   return (
     <div className='notes-details-div'>
@@ -52,7 +55,16 @@ const NoteDetails = ({ itemNotes, handleItemNotes, notesList , handleSidebar }) 
             onKeyDown={handleKeyDown}
           >
           </textarea>
-          <img src={SubmitArrow} alt="submitButton" className='submit-btn' onClick={handleAllNotes} />
+          {isSubmitDisabled ? <img
+            src={SubmitArrow}
+            alt="EnabledArrowButton"
+            className='submit-btn'
+            onClick={handleAllNotes}
+          /> :  <img
+          src={DisabledArrow}
+          alt="DisabledArrowButton"
+          className='disable-btn'
+        />}
         </div>
       </div>
     </div>
