@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState , useRef} from 'react'
 import './NewNote.css'
 
 const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
@@ -7,6 +7,8 @@ const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
     const [selectedColor, setSelectedColor] = useState(null)
     const [nameValidate, setNameValidate] = useState(false)
     const [colorValidate, setColorValidate] = useState(false)
+
+    const newDivRef = useRef(null)
 
     const [grpName, setGrpName] = useState({
         id: null,
@@ -28,7 +30,11 @@ const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
     }
 
     const handleShowNewNote = () => {
-        handleHomeScreen()
+        console.log('beforeIf',newDivRef.current)
+        if (!newDivRef.current.contains(event.target)) {
+            handleHomeScreen();
+            console.log('AfterIf',newDivRef.current)
+        }
     }
 
     const handleGroupNameChange = (event) => {
@@ -60,9 +66,9 @@ const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
 
 
     return (
-        <div className='whole-page' onDoubleClick={handleShowNewNote}>
+        <div className='whole-page' onClick={handleShowNewNote}>
             {/* Added the functionality that on doubleClicking the New Note Component is disappered and we come back to home screen*/}
-            <div className='new-div-style' >
+            <div className='new-div-style' ref={newDivRef} >
                 <h2>Create New Group</h2>
                 <div className='input-conatiner'>
                     <div>

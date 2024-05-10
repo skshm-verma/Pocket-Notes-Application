@@ -32,7 +32,6 @@ const Home = () => {
     setShowNewNote(false);
     setNewOpacity(1);
   };
-  
 
   const handleItemNotes = (note , noteId) => {
     setAllNotes([...allNotes, { id: noteId, note , date : moment().format("Do MMM YYYY") , time : moment().format("h:mm a")}])
@@ -46,6 +45,7 @@ const Home = () => {
     setShowNewNote(false)
     setNewOpacity(1);
   }
+
 
   useEffect(() => {
     localStorage.setItem('groupList' , JSON.stringify(newGroupDataList))
