@@ -35,7 +35,7 @@ const Home = () => {
   
 
   const handleItemNotes = (note , noteId) => {
-    setAllNotes([...allNotes, { id: noteId, note , data : moment().format("Do MMM YYYY") , time : moment().format("h:mm a")}])
+    setAllNotes([...allNotes, { id: noteId, note , date : moment().format("Do MMM YYYY") , time : moment().format("h:mm a")}])
   }
 
   const handleSidebar = (val) => {

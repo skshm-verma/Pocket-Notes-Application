@@ -13,7 +13,7 @@ const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
         text: '',
         colorChoice: '',
         shortHandName: '',
-        data: '',
+        date: '',
         time: ''
     })
 
@@ -32,12 +32,10 @@ const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
     }
 
     const handleGroupNameChange = (event) => {
-        // setNameValidate(true)
         setGrpName({ ...grpName, text: event.target.value })
     };
 
     const handleColorSelect = (color) => {
-        // setColorValidate(false)
         setSelectedColor(color);
         setGrpName({ ...grpName, colorChoice: color })
     };
@@ -66,7 +64,7 @@ const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
             {/* Added the functionality that on doubleClicking the New Note Component is disappered and we come back to home screen*/}
             <div className='new-div-style' >
                 <h2>Create New Group</h2>
-                <div className='input-conatiner' style={{ width: '100%' }}>
+                <div className='input-conatiner'>
                     <div>
                         <span>Group Name</span>
                         <input
@@ -76,10 +74,10 @@ const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
                             onInput={handleGroupNameChange}
                         />
                     </div>
-                    {nameValidate && (<span style={{ color: 'red', fontSize: '0.7rem', display: 'block', marginTop: '0.5rem' }}>Group name required</span>)}
+                    {nameValidate && (<span className='validate-style'>Group name required</span>)}
                 </div>
 
-                <div className='input-conatiner' style={{ width: '100%' }}>
+                <div className='input-conatiner'>
                     <div style={{display: 'flex'}}>
                         <span style={{display: 'block' }}>Choose Color</span>
                         <div style={{ display: 'block' }}>
@@ -97,7 +95,7 @@ const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
                             </ul>
                         </div>
                     </div>
-                    {colorValidate && (<span style={{ color: 'red', fontSize: '0.7rem', display: 'block' , marginTop: '0.5rem'}}>Color required</span>)}
+                    {colorValidate && (<span className='validate-style'>Color required</span>)}
                 </div>
 
 
