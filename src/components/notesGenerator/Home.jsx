@@ -19,7 +19,7 @@ const Home = () => {
 
   const handleAddComponent = () => {
     setShowNewNote(true)
-    setNewOpacity(0.4)
+    setNewOpacity(0.3)
   }
 
   const handleNoteDetails = (group) => {
