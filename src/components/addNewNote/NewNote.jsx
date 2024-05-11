@@ -30,10 +30,8 @@ const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
     }
 
     const handleShowNewNote = () => {
-        console.log('beforeIf',newDivRef.current)
         if (!newDivRef.current.contains(event.target)) {
             handleHomeScreen();
-            console.log('AfterIf',newDivRef.current)
         }
     }
 
@@ -71,8 +69,8 @@ const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
             <div className='new-div-style' ref={newDivRef} >
                 <h2>Create New Group</h2>
                 <div className='input-conatiner'>
-                    <div>
-                        <span>Group Name</span>
+                    <div style={{display : 'flex' , alignItems : 'center'}}>
+                        <span style={{display:'block'}}>Group Name</span>
                         <input
                             type="text"
                             placeholder='Enter group name'
@@ -84,7 +82,7 @@ const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
                 </div>
 
                 <div className='input-conatiner'>
-                    <div style={{display: 'flex'}}>
+                    <div style={{display: 'flex', alignItems : 'center'}}>
                         <span style={{display: 'block' }}>Choose Color</span>
                         <div style={{ display: 'block' }}>
                             <ul style={{ display: 'flex' }}>

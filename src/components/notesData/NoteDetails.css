@@ -149,7 +149,20 @@
       }
 
       .note-detail {
-        width: 80%;
-        margin: 0.5rem 2.5rem;
+        width: 88%;
+        margin: 0.5rem 1.6rem;
+        font-size: 1rem;
+      }
+
+      .note-logo{
+        margin: auto 0.8rem auto 1.5rem;
+      }
+
+      .note-detail p {
+        padding: 1rem 2rem 0rem;
+    }
+
+      .date-n-time{
+        font-size: 0.6rem;
       }
 }

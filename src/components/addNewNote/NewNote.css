@@ -86,3 +86,49 @@
     cursor: pointer;
     margin: 0.8rem 2rem 0.8rem 0rem;
 }
+
+
+@media only screen and (max-width: 820px) {
+
+    .new-div-style h2 {
+        font-size: 1.2rem;
+        padding: 0.5rem 0.7rem;
+        margin: 0.5rem 1rem 0rem;
+    }
+
+    .input-conatiner {
+        font-size: 0.8rem;
+        margin: 0.3rem;
+        padding: 0.2rem 1rem;
+    }
+
+    .input-label {
+        padding: 0.3rem 0.3rem 0.3rem 0.8rem;
+        width: 10rem;
+    }
+
+    .input-conatiner div input::placeholder {
+        font-size: 0.7rem;
+    }
+
+    .input-conatiner span {
+        margin-right: 0.6rem;
+    }
+
+    .color-list {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .btn button {
+        width: 5.5rem;
+        height: 1.2rem;
+        margin: 0.7rem 1.7rem 0.5rem 0rem;
+        font-size: 0.8rem;
+    }
+
+    .validate-style {
+        font-size: 0.5rem;
+        margin-top: 0.3rem;
+    }
+}

@@ -32,7 +32,7 @@ const NoteDetails = ({ itemNotes, handleItemNotes, notesList, handleSidebar }) =
   return (
     <div className='notes-details-div'>
       <div className='header'>
-        {window.innerWidth < 820 && (
+        {window.innerWidth < 821 && (
           <img
             src={BackArrow}
             alt='ArrowButton'
