@@ -62,10 +62,8 @@ const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
         }
     };
 
-
     return (
         <div className='whole-page' onClick={handleShowNewNote}>
-            {/* Added the functionality that on doubleClicking the New Note Component is disappered and we come back to home screen*/}
             <div className='new-div-style' ref={newDivRef} >
                 <h2>Create New Group</h2>
                 <div className='input-conatiner'>
@@ -94,14 +92,12 @@ const NewNote = ({ onGroupCreate, handleHomeScreen }) => {
                                         onClick={() => handleColorSelect(color)}
                                     >
                                     </li>
-
                                 ))}
                             </ul>
                         </div>
                     </div>
                     {colorValidate && (<span className='validate-style'>Color required</span>)}
                 </div>
-
 
                 <div className='btn' onClick={handleCreateGroup}><button type='submit'>Create</button></div>
             </div>

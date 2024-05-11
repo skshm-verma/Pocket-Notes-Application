@@ -7,7 +7,6 @@ import NoteDetails from '../notesData/NoteDetails'
 import moment from 'moment';
 import './Home.css'
 
-
 const Home = () => {
 
   const [newGroupDataList, setNewGroupDataList] = useState(JSON.parse(localStorage.getItem('groupList')) || [])
@@ -46,12 +45,10 @@ const Home = () => {
     setNewOpacity(1);
   }
 
-
   useEffect(() => {
     localStorage.setItem('groupList' , JSON.stringify(newGroupDataList))
     localStorage.setItem('allNotes', JSON.stringify(allNotes))
   }, [newGroupDataList , allNotes]);
-
 
 
   return (

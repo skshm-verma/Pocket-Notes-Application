@@ -2,8 +2,6 @@ import React from 'react'
 import Plus from '../../../public/assets/plus.png'
 import './Sidebar.css'
 
-
-
 const Sidebar = ({ handleAddComponent, handleNoteDetails, groupDataList }) => {
 
     const handleItemClick = (group) => {
@@ -36,41 +34,3 @@ const Sidebar = ({ handleAddComponent, handleNoteDetails, groupDataList }) => {
 }
 
 export default Sidebar
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const userInfoDataJson = localStorage.getItem('formData');
-// if (userInfoDataJson) {
-//   const parsedUserInfo = JSON.parse(userInfoDataJson);
-//   setUserInfo(parsedUserInfo);
-// }
-
-// const selectedMoviesJSON = localStorage.getItem("selectedMovies");
-// const moviesDataJSON = localStorage.getItem("moviesData");
-
-// if (selectedMoviesJSON && moviesDataJSON) {
-//   const selectedMovies = JSON.parse(selectedMoviesJSON);
-//   const moviesData = JSON.parse(moviesDataJSON);
-
-//   const genreData = selectedMovies.map((id) => {
-//     return moviesData.find((movie) => movie.id === id);
-//   });
-//   setGenreName(genreData);

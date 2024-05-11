@@ -5,12 +5,9 @@ import SubmitArrow from '../../../public/assets/SubmitArrow.png'
 import DisabledArrow from '../../../public/assets/DisabledArrow.png'
 import './NoteDetails.css'
 
-
 const NoteDetails = ({ itemNotes, handleItemNotes, notesList, handleSidebar }) => {
 
-
   const [note, setNote] = useState('')
-
 
   const handleAllNotes = () => {
     setNote('')
